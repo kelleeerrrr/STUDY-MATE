@@ -8,21 +8,17 @@
     android:background="@drawable/school_bg_land"
     android:padding="24dp">
 
-    <!-- Logo on the left -->
-
-    <!-- Login form on the right -->
-
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="151dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="44dp"
         android:scaleType="centerCrop"
         android:src="@drawable/school_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349" />
+        app:layout_constraintVertical_bias="0.374" />
 
     <LinearLayout
         android:id="@+id/loginForm"
@@ -36,9 +32,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@id/logo"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.496">
+        app:layout_constraintVertical_bias="0.593">
 
-        <!-- Login Title -->
 
         <!-- Username Label -->
         <TextView
@@ -94,23 +89,24 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:backgroundTint="#E91919"
-            app:cornerRadius="12dp"
             android:fontFamily="sans-serif-medium"
             android:stateListAnimator="@null"
             android:text="Login"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            app:cornerRadius="12dp" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
         android:text="Login"
         android:textColor="#FF0000"
-        android:textSize="50sp"
+        android:textSize="55sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="303dp"
-        tools:layout_editor_absoluteY="-9dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
