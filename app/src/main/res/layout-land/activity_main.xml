@@ -15,7 +15,7 @@
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/school_logo"
+        android:src="@drawable/logo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
