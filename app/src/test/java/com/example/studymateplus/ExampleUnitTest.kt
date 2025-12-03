@@ -1,4 +1,4 @@
-package com.example.loginformpractice
+package com.example.studymateplus
 
 import org.junit.Test
 

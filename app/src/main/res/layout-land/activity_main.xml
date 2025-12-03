@@ -2,60 +2,73 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/main_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/school_bg_land"
-    android:padding="24dp">
+    android:padding="24dp"
+    tools:context=".MainActivity">
 
+    <!-- App Logo -->
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="151dp"
-        android:layout_height="152dp"
-        android:layout_marginStart="44dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
         android:scaleType="centerCrop"
         android:src="@drawable/school_logo"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.374" />
+        app:layout_constraintHorizontal_bias="0.1" />
 
+    <!-- Login Title -->
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Login"
+        android:textColor="#FF0000"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Login Form -->
     <LinearLayout
         android:id="@+id/loginForm"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLogin"
         app:layout_constraintStart_toEndOf="@id/logo"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.593">
-
+        app:layout_constraintEnd_toEndOf="parent">
 
         <!-- Username Label -->
         <TextView
             android:id="@+id/tvUsernameLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
             android:text="Username"
             android:textColor="#FF0000"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
 
-        <!-- Username Input -->
+        <!-- Username Field -->
         <EditText
-            android:id="@+id/Username"
+            android:id="@+id/usernameField"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginBottom="12dp"
             android:background="@drawable/rounded_edittext"
-            android:hint="Enter username"
-            android:inputType="textPersonName"
+            android:layout_marginBottom="12dp"
             android:padding="12dp"
+            android:hint="Enter username"
             android:textColor="#000000"
             android:textColorHint="#FF0000" />
 
@@ -64,22 +77,22 @@
             android:id="@+id/tvPasswordLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
             android:text="Password"
             android:textColor="#FF0000"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
 
-        <!-- Password Input -->
+        <!-- Password Field -->
         <EditText
-            android:id="@+id/Password"
+            android:id="@+id/passwordField"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginBottom="16dp"
             android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="16dp"
+            android:padding="12dp"
             android:hint="Enter password"
             android:inputType="textPassword"
-            android:padding="12dp"
             android:textColor="#000000"
             android:textColorHint="#FF0000" />
 
@@ -87,26 +100,28 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:backgroundTint="#E91919"
-            android:fontFamily="sans-serif-medium"
-            android:stateListAnimator="@null"
             android:text="Login"
             android:textColor="#FFFFFF"
+            android:textStyle="bold"
             app:cornerRadius="12dp" />
+
+        <!-- Create Account -->
+        <TextView
+            android:id="@+id/tvCreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Create Account"
+            android:textColor="#FF0000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true" />
+
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Login"
-        android:textColor="#FF0000"
-        android:textSize="55sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+

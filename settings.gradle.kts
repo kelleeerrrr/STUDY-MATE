@@ -5,19 +5,21 @@ pluginManagement {
                 includeGroupByRegex("com\\.android.*")
                 includeGroupByRegex("com\\.google.*")
                 includeGroupByRegex("androidx.*")
+                includeGroupByRegex("com\\.firebase.*") // <-- added for Firebase plugins
             }
         }
         mavenCentral()
         gradlePluginPortal()
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
+        google() // required for Firebase & Android
         mavenCentral()
     }
 }
 
-rootProject.name = "LoginFormPractice"
+rootProject.name = "StudyMatePlus"
 include(":app")
